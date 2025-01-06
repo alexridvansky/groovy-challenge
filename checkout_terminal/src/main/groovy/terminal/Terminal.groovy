@@ -1,7 +1,11 @@
 package terminal
 
-public final class Terminal {
+import org.springframework.boot.autoconfigure.SpringBootApplication
+
+@SpringBootApplication
+class Terminal {
 
     static void main(String[] args) {
     }
+
 }

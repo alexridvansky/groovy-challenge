@@ -7,12 +7,22 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    springVersion = "6.2.1"
+    springBootVersion = "3.4.1"
+    bytebuddyVersion = "1.12.19"
+    spockSpringVersion = "2.4-M4-groovy-4.0"
+}
+
 dependencies {
     implementation libs.groovy.all
+    implementation "org.springframework.boot:spring-boot-starter:${springBootVersion}"
 
     testImplementation libs.spock.core
     testImplementation libs.junit
-
+    testImplementation "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+    testImplementation "org.spockframework:spock-spring:${spockSpringVersion}"
+//
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
